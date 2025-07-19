@@ -1,0 +1,82 @@
+body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #00f0ff;
+    }
+    .buttons {
+      margin: 10px;
+    }
+    .game-board {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .card {
+      width: 100px;
+      height: 100px;
+      background: #1a1a1a;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .card.flipped {
+      background: #00f0ff;
+      color: #000;
+    }
+    .card.matched {
+      background: #0f0;
+      color: #000;
+      pointer-events: none;
+    }
+    #winnerMessage {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+      z-index: 10;
+      text-align: center;
+    }
+    #restartAfterWinBtn {
+      margin-top: 15px;
+      padding: 20px 40px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #00f0ff;
+      color: #000;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s;
+    }
+    #restartAfterWinBtn:hover {
+      transform: scale(1.1);
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #00f0ff;
+      color: #000;
+    }
